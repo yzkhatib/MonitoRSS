@@ -52,7 +52,7 @@ export const NewHeader = ({ invertBackground }: Props) => {
           <HStack gap={8}>
             <Flex alignItems="center" overflow="hidden">
               {discordBotData && (
-                <Link to={pages.userFeeds()} aria-label="MonitoRSS Home">
+                <Link to={pages.userFeeds()} aria-label="Paw Feed Home">
                   <Flex alignItems="center" paddingBottom="1" overflow="hidden">
                     <Avatar
                       src={discordBotData.result.avatar || undefined}
@@ -67,9 +67,9 @@ export const NewHeader = ({ invertBackground }: Props) => {
                       overflow="hidden"
                       textOverflow="ellipsis"
                       fontWeight="bold"
-                      title="MonitoRSS"
+                      title="Paw Feed"
                     >
-                      MonitoRSS
+                      Paw Feed
                     </chakra.span>
                   </Flex>
                 </Link>

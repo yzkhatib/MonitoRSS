@@ -429,7 +429,7 @@ const MessageBuilderContent: React.FC = () => {
                   <HStack gap={8}>
                     <Flex alignItems="center" overflow="hidden">
                       {discordBotData && (
-                        <RouterLink to={pages.userFeeds()} aria-label="MonitoRSS Home">
+                        <RouterLink to={pages.userFeeds()} aria-label="Paw Feed Home">
                           <Flex alignItems="center" paddingBottom="1" overflow="hidden">
                             <Avatar
                               src={discordBotData.result.avatar || undefined}
@@ -444,10 +444,10 @@ const MessageBuilderContent: React.FC = () => {
                               overflow="hidden"
                               textOverflow="ellipsis"
                               fontWeight="bold"
-                              title="MonitoRSS"
+                              title="Paw Feed"
                               color="white"
                             >
-                              MonitoRSS
+                              Paw Feed
                             </chakra.span>
                           </Flex>
                         </RouterLink>

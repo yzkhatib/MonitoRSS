@@ -4,6 +4,7 @@ import { DiscordPresenceActivityType } from "./constants/discord-presence-activi
 export interface AppConfig {
   botToken: string;
   botClientId?: string;
+  controlPanelUrl: string;
   supporterGuildId?: string;
   rabbitMqUrl: string;
   presenceStatus: {
@@ -82,6 +83,10 @@ export function loadConfig(): AppConfig {
   return {
     botToken,
     botClientId: process.env.BOT_PRESENCE_DISCORD_BOT_CLIENT_ID,
+    controlPanelUrl:
+      process.env.BOT_PRESENCE_CONTROL_PANEL_URL ||
+      process.env.BACKEND_API_LOGIN_REDIRECT_URI ||
+      "http://localhost:8000",
     supporterGuildId: process.env.BOT_PRESENCE_SUPPORTER_GUILD_ID,
     rabbitMqUrl: encodeURI(rabbitMqUrlRaw),
     presenceStatus,

@@ -182,7 +182,7 @@ async function registerCommands(client: Client, config: AppConfig) {
 
     await client.api.applicationCommands.createGlobalCommand(botClientId, {
       name: "help",
-      description: "Show information on how to use MonitoRSS.",
+      description: "Show information on how to use Paw Feed.",
       type: ApplicationCommandType.ChatInput,
     });
 
@@ -208,7 +208,7 @@ function listenToEvents(
       client.api.interactions
         .reply(interaction.data.id, interaction.data.token, {
           content:
-            'To add and manage feeds, please visit the "Control Panel" at <https://monitorss.xyz> to add and control feeds.\n\nFor support, please either reach out to support@monitorss.xyz or join the support Discord server at https://discord.gg/pudv7Rx.',
+            `To add and manage feeds, please visit the Paw Feed control panel at <${config.controlPanelUrl}>.`,
         })
         .catch((err) => {
           logger.error("Error replying to interaction", {

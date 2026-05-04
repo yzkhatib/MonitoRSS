@@ -35,7 +35,7 @@ const DISCORD_V2_COMPONENT_TYPE = {
 } as const;
 
 export const DISCORD_DEFAULT_AVATAR_URL = "https://cdn.discordapp.com/embed/avatars/0.png";
-export const MONITORSS_USERNAME = "MonitoRSS";
+export const MONITORSS_USERNAME = "Paw Feed";
 
 /**
  * When branding is active (custom name or avatar), Discord uses its own default avatar
